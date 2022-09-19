@@ -11,15 +11,15 @@
 
 body {
   width: 100%;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
-  display: grid;
-  grid-template-areas:
-    'header header header'
-    'nav content sidebar'
-    'footer footer footer'
-  ;
-  grid-template-rows: 70px 1fr 60px;
+}
+
+.layout {
+  padding: 20px 0;
+  display: flex;
   gap: 10px;
+  overflow: hidden;
 }
 
 a {
@@ -71,6 +71,7 @@ header {
   height: 60px;
   font-size: 20px;
   box-shadow: 3px 0 8px 0 rgba(0, 0, 0, 0.7);
+  z-index: 5;
 }
 
 header .container {
@@ -104,6 +105,10 @@ header .search-bar i {
   right: 15px;
   color: #7c7c7c;
   cursor: pointer;
+}
+
+header input {
+  display: none;
 }
 
 /* NAV */
@@ -169,8 +174,17 @@ nav .dropdown {
   margin-left: 50px;
 }
 
+nav .dropdown > li {
+  margin: 10px 0;
+  list-style: none;
+}
+
 nav .dropdown > li > a {
   color: #000000;
+}
+
+nav #kategori.open {
+  height: 250px;
 }
 
 nav i {
@@ -204,12 +218,12 @@ nav .toggle.close {
 /* MAIN */
 #content {
   grid-area: content;
-  margin-left: 255px;
+  margin-left: 260px;
   transition: margin 500ms ease-in-out;
 }
 
 #content.menu-close {
-  margin-left: 80px;
+  margin-left: 90px;
 }
 
 #content .container {
@@ -239,6 +253,13 @@ aside .container img {
   object-fit: cover;
   width: 100%;
   max-height: 200px;
+}
+
+aside .container h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 
 aside .container span {
@@ -294,6 +315,7 @@ footer .container {
 
   nav {
     width: 60px;
+    z-index: 2;
   }
 
   nav.close {
@@ -429,14 +451,6 @@ footer .container {
   nav .dropdown > li > a {
     color: #f1f1f1;
   }
-  
-  nav .dropdown > li {
-    margin: 10px 0;
-  }
-
-  nav #kategori.open {
-    height: 250px;
-  }
 
   #content {
     margin-left: 10px;
@@ -444,7 +458,7 @@ footer .container {
   }
   
   #content.open-menu {
-    transform: translateX(50%);
+    transform: translateX(45%);
     transition: transform 500ms ease-in-out;
   }
   
@@ -459,6 +473,16 @@ footer .container {
 }
 
 @media (max-width: 576px) {
+  .layout {
+    flex-direction: column;
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .layout.open-menu {
+    transform: translateX(43%);
+    transition: transform 500ms ease-in-out;
+  }
+
   header a {
     font-size: 20px;
   }
@@ -482,7 +506,7 @@ footer .container {
   }
 
   #content.open-menu {
-    transform: translateX(43%);
+    transform: translateX(0%);
   }
 
   #content .container {
@@ -491,6 +515,10 @@ footer .container {
 
   aside {
     width: 96%;
+  }
+
+  #aside.open-menu {
+    transform: translateX(0%);
   }
 
   aside .container img {
