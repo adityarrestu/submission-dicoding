@@ -17,7 +17,13 @@
   <body>
     <header>
       <div class="flex container">
-        <a href="#">MAYO <span>LIRIK</span> </a>
+        <input id="btn-menu" type="checkbox" />
+        <div id="toggle-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <a href="#">MAYO <span>LIRIK</span></a>
         <div class="search-bar flex">
           <input type="text" placeholder="Cari lirik" />
           <i class="fa fa-search"></i>
@@ -27,55 +33,53 @@
 
     <nav id="nav" class="card">
       <i id="toggle" class="fa fa-chevron-right toggle" aria-hidden="true"></i>
-      <div class="container">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa fa-home" aria-hidden="true"></i>
-              Beranda
-            </a>
-          </li>
-          <li id="kategori">
-            <a style="cursor: pointer">
-              <i class="fa fa-folder" aria-hidden="true"></i>
-              Kategori
-              <i id="btn-dropdown" class="fa fa-chevron-down"></i>
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="404.html">Jepang</a>
-              </li>
-              <li>
-                <a href="404.html">Korea</a>
-              </li>
-              <li>
-                <a href="404.html">Anisong</a>
-              </li>
-              <li>
-                <a href="404.html">Vocaloid</a>
-              </li>
-              <li>
-                <a href="404.html">Hololive</a>
-              </li>
-              <li>
-                <a href="404.html">Lainnya</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-info-circle" aria-haspopup="true"></i>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-paper-plane" aria-hidden="true"></i>
-              Request
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul id="menu" class="container">
+        <li>
+          <a href="#">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Beranda
+          </a>
+        </li>
+        <li id="kategori">
+          <a style="cursor: pointer">
+            <i class="fa fa-folder" aria-hidden="true"></i>
+            Kategori
+            <i id="btn-dropdown" class="fa fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="404.html">Jepang</a>
+            </li>
+            <li>
+              <a href="404.html">Korea</a>
+            </li>
+            <li>
+              <a href="404.html">Anisong</a>
+            </li>
+            <li>
+              <a href="404.html">Vocaloid</a>
+            </li>
+            <li>
+              <a href="404.html">Hololive</a>
+            </li>
+            <li>
+              <a href="404.html">Lainnya</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-info-circle" aria-haspopup="true"></i>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            Request
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <main id="content" class="card">
@@ -134,7 +138,7 @@
       </section>
     </main>
 
-    <aside>
+    <aside id="aside">
       <a href="./identity.html" id="identity" class="card">
         <img src="./src/img/Moona Hoshinova - High Tide.jpg" alt="" />
         <div class="info">
