@@ -1,5 +1,4 @@
 const nav = document.getElementById('nav')
-const content = document.getElementById('content')
 const aside = document.getElementById('aside')
 const menuToggle = document.getElementById('toggle')
 const root = document.documentElement
@@ -12,7 +11,6 @@ const btnMenu = document.getElementById('btn-menu')
 
 menuToggle.addEventListener('click', () => {
   nav.classList.toggle('close')
-  content.classList.toggle('menu-close')
   menuToggle.classList.toggle('close')
   if (kategori.className.includes('open')) {
     kategori.classList.toggle('open')
