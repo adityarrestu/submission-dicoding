@@ -64,7 +64,7 @@ a {
 /* HEADERk */
 header {
   grid-area: header;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: steelblue;
   width: 100%;
@@ -433,7 +433,7 @@ footer .container {
     top: 60px;
     left: -230px;
     width: 230px;
-    height: 100vh;
+    height: 100%;
   }
   
   nav.open {
