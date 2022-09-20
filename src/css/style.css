@@ -141,11 +141,12 @@ nav {
   width: 700px;
   height: fit-content;
   margin: 0 10px;
-  transition: width 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 nav.close {
   width: 54px;
+  transition: 500ms ease-in-out;
 }
 
 nav #menu {
@@ -332,7 +333,7 @@ footer {
   }
 
   nav.close {
-    width: 700px;
+    width: 350px;
   }
 
   nav #toggle {
@@ -417,10 +418,12 @@ footer {
     height: 100vh;
     margin: 0;
     z-index: 1;
+    transition: 500ms ease-in-out;
   }
 
   nav.open {
     transform: translateX(100%);
+    transition: 500ms ease-in-out;
   }
 
   nav.card {

@@ -4,7 +4,209 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      #identity-info {
+        display: flex;
+      }
+
+      #identity-info img {
+        max-width: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      #identity-info > .info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+      }
+
+      #identity-info > .info > h4 {
+        color: #999999;
+        margin: 10px 0;
+      }
+
+      #identity-info > .info > blockquote {
+        text-align: center;
+        margin: 20px;
+      }
+
+      @media (max-width: 992px) {
+        #identity-info img {
+          max-width: 250px;
+        }
+
+        #identity-info > .info > h4 {
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        #identity-info img {
+          max-width: 200px;
+        }
+
+        #identity-info > .info > h4 {
+          font-size: 15px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>About Me - Mayo Lirik</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="flex container">
+        <input id="btn-menu" type="checkbox" />
+        <div id="toggle-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <a href="index.html">MAYO <span>LIRIK</span></a>
+        <div class="search-bar flex">
+          <input type="text" placeholder="Cari lirik" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <nav id="nav" class="card">
+        <i id="toggle" class="fa fa-chevron-right" aria-hidden="true"></i>
+        <ul id="menu">
+          <li>
+            <a href="index.html">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              Beranda
+            </a>
+          </li>
+          <li id="kategori">
+            <a style="cursor: pointer">
+              <i class="fa fa-folder" aria-hidden="true"></i>
+              Kategori
+              <i id="btn-dropdown" class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="404.html">Jepang</a>
+              </li>
+              <li>
+                <a href="404.html">Korea</a>
+              </li>
+              <li>
+                <a href="404.html">Anisong</a>
+              </li>
+              <li>
+                <a href="404.html">Vocaloid</a>
+              </li>
+              <li>
+                <a href="404.html">Hololive</a>
+              </li>
+              <li>
+                <a href="404.html">Lainnya</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="identity.html">
+              <i class="fa fa-info-circle" aria-haspopup="true"></i>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              Request
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="layout">
+        <main id="content" class="card">
+          <article id="identity-info">
+            <img
+              src="https://i.ibb.co/7tz6Z60/identity-ar.jpg"
+              alt="Profile Image"
+            />
+            <div class="info">
+              <h2>Aditya Restu Adji</h2>
+              <h4>Penggapai Mimpi | Pengelana Hidup</h4>
+              <blockquote>
+                "Keahlian bermula dari ketidakmampuan, kemampuan diperoleh dari
+                belajar dan pengalaman. Tidak ada kata percuma dalam belajar.
+                Tidak ada kata terlambat untuk belajar."
+              </blockquote>
+            </div>
+          </article>
+        </main>
+
+        <aside id="aside">
+          <a href="./identity.html" id="identity" class="card">
+            <img
+              src="https://i.ibb.co/7tz6Z60/identity-ar.jpg"
+              alt="Profile Image"
+            />
+            <div class="info">
+              <h5 style="color: #000000">Aditya Restu Adji</h5>
+              <h5 style="color: #999999">@adityarrestu</h5>
+            </div>
+          </a>
+          <div class="card container">
+            <a href="./404.html">
+              <img
+                src="https://i.ibb.co/0M56C73/Moona-Hoshinova-High-Tide.jpg"
+                alt="Moona-Hoshinova-High-Tide"
+              />
+              <div class="card">
+                <h5 class="line-clamp">
+                  <span>#1</span> High Tide - Moona Hoshinova
+                </h5>
+              </div>
+            </a>
+            <a href="./404.html">
+              <div class="card">
+                <h5 class="line-clamp"><span>#2</span> Kaikai Kitan - Eve</h5>
+              </div>
+            </a>
+            <a href="./404.html">
+              <div class="card">
+                <h5 class="line-clamp">
+                  <span>#3</span> Zankyou Sanka - Aimer
+                </h5>
+              </div>
+            </a>
+            <a href="./404.html">
+              <div class="card">
+                <h5 class="line-clamp">
+                  <span>#4</span> Ciki Ciki Bam Bam - QUEENDOM
+                </h5>
+              </div>
+            </a>
+            <a href="./404.html">
+              <div class="card">
+                <h5 class="line-clamp">
+                  <span>#5</span> Akuma no Ko - Higuchi Ai
+                </h5>
+              </div>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2022 Mayo Lirik</p>
+    </footer>
+
+    <script src="./src/js/index.js"></script>
+  </body>
 </html>
