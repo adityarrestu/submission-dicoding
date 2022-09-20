@@ -149,6 +149,14 @@ nav.close {
   transition: 500ms ease-in-out;
 }
 
+nav.identity {
+  width: 350px;
+}
+
+nav.identity.close {
+  width: 54px;
+}
+
 nav #menu {
   padding: 10px;
   overflow: hidden;
@@ -414,13 +422,13 @@ footer {
     position: fixed;
     top: 50px;
     left: -180px;
-    width: 180px;
+    width: 180px !important;
     height: 100vh;
     margin: 0;
     z-index: 1;
     transition: 500ms ease-in-out;
   }
-
+  
   nav.open {
     transform: translateX(100%);
     transition: 500ms ease-in-out;
