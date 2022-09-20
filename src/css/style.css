@@ -19,14 +19,16 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--background-color);
+  background-color: #3a3a3a;
 }
 
 .main-container {
   position: relative;
   max-width: 1440px;
-  margin: 65px 0;
+  margin-top: 50px;
+  padding: 10px 0;
   display: flex;
+  background-color: var(--background-color);
 }
 
 .layout {
@@ -139,12 +141,11 @@ nav {
   width: 700px;
   height: fit-content;
   margin: 0 10px;
-  transition: 500ms ease-in-out;
+  transition: width 500ms ease-in-out;
 }
 
 nav.close {
   width: 54px;
-  transition: 500ms ease-in-out;
 }
 
 nav #menu {
@@ -316,9 +317,213 @@ aside .container .card:hover {
 /* FOOTER */
 footer {
   height: 60px;
+  width: 100%;
   background-color: #424242;
   color: #f1f1f1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* RESPONSIVITY */
+@media (max-width: 992px) {
+  nav {
+    width: 54px;
+  }
+
+  nav.close {
+    width: 700px;
+  }
+
+  nav #toggle {
+    transform: rotate(0deg);
+  }
+
+  nav #toggle.close {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    padding: 0 20px;
+  }
+  
+  header .container > input {
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 4;
+  }
+
+  header #toggle-menu {
+    position: relative;
+    margin-right: 15px;
+  }
+
+  header #toggle-menu > div {
+    display: blcok;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: var(--text-color);
+    border-radius: 4px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  header #toggle-menu > div:nth-child(2) {
+    width: 20px;
+    transform-origin: 0% 0%;
+  } 
+  
+  header #toggle-menu > div:nth-child(3) {
+    width: 15px;
+    transform-origin: 0% 100%;
+  }
+
+  header input:checked ~ #toggle-menu {
+    top: 4px;
+  }
+  
+  header input:checked ~ #toggle-menu > div {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px);
+    background-color: var(--text-dark-color);
+  }
+
+  header input:checked ~ #toggle-menu > div:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) translateX(-50%);
+  }
+
+  header input:checked ~ #toggle-menu > div:nth-child(3) {
+    opacity: 1;
+    width: 25px;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  nav {
+    position: fixed;
+    top: 50px;
+    left: -180px;
+    width: 180px;
+    height: 100vh;
+    margin: 0;
+    z-index: 1;
+  }
+
+  nav.open {
+    transform: translateX(100%);
+  }
+
+  nav.card {
+    background-color: #3a3a3a;
+    border-radius: 0;
+  }
+
+  nav #toggle {
+    display: none;
+  }
+
+  nav #menu > li > a {
+    background-color: transparent;
+    /* border-bottom: 1px solid #f1f1f1; */
+    /* border-radius: 0; */
+    padding-bottom: 10px;
+  }
+
+  nav .dropdown > li > a {
+    color: #f1f1f1;
+  }
+
+  .layout {
+    transition: transform 500ms ease-in-out;
+    margin-left: 10px;
+  }
+
+  .layout.open-menu {
+    transform: translateX(180px);
+    transition: transform 500ms ease-in-out;
+  }
+
+  #content .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  .main-container {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 576px) {
+  .layout {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .main-container {
+    margin: 50px 0;
+  }
+
+  #content.card {
+    padding: 25px 10px;
+    border-radius: 0;
+  }
+
+  #content .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav #menu li a {
+    font-size: 15px;
+  }
+
+  aside {
+    margin: 0;
+    width: 100%;
+  }
+
+  aside .card {
+    border-radius: 0;
+  }
+
+  aside .container img {
+    max-width: 400px;
+    max-height: 250px;
+    transform: translateX(25%);
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header,
+  footer {
+    max-width: 1440px;
+    border-radius: 10px;
+  }
+
+  #content .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
