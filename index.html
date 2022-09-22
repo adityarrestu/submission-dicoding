@@ -16,22 +16,19 @@
   </head>
   <body>
     <header>
-      <div class="flex container">
-        <input id="btn-menu" type="checkbox" />
-        <div id="toggle-menu">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <a href="index.html">MAYO <span>LIRIK</span></a>
-        <div class="search-bar flex">
-          <input type="text" placeholder="Cari lirik" />
-          <i class="fa fa-search"></i>
-        </div>
-      </div>
-    </header>
+      <input id="btn-menu" type="checkbox" />
+      <button id="toggle-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html">MAYO <span>LIRIK</span></a>
 
-    <div class="main-container">
+      <div class="search-bar">
+        <input type="text" placeholder="Cari lirik" />
+        <i class="fa fa-search"></i>
+      </div>
+
       <nav id="nav" class="card">
         <i id="toggle" class="fa fa-chevron-right" aria-hidden="true"></i>
         <ul id="menu">
@@ -82,138 +79,106 @@
           </li>
         </ul>
       </nav>
+    </header>
 
-      <div class="layout">
-        <main id="content" class="card">
-          <article id="latest">
-            <h3>Postingan Terbaru</h3>
-            <div class="container">
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/w7L7SBm/King-Gnu-Sakayume.png"
-                  alt="King-Gnu-Sakayume"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">Sakayume - King Gnu</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/0M56C73/Moona-Hoshinova-High-Tide.jpg"
-                  alt="Moona-Hoshinova-High-Tide"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">High Tide - Moona Hoshinova</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img src="https://i.ibb.co/QPXcy2W/Eve.jpg" alt="Eve" />
-                <div class="card-body">
-                  <h5 class="line-clamp">Kaikai Kitan - Eve</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/N7zMrYX/Higuchi-Ai-Akuma-no-Ko.jpg"
-                  alt="Higuchi-Ai-Akuma-no-Ko"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">Akuma no Ko - Higuchi Ai</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/f2CMzLK/Li-SA-Gurenge.jpg"
-                  alt="Li-SA-Gurenge"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">Gurenge - LiSA</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/z4h6TqK/Ciki-ciki-bam-bam.jpg"
-                  alt="Ciki-ciki-bam-bam"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">Ciki Ciki Bam Bam - QUEENDOM</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/Bjg8q9T/Nasuo-Honey-Jet-Coaster.jpg"
-                  alt="Nasuo-Honey-Jet-Coaster"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">Honey Jet Coaster - Nasuo</h5>
-                </div>
-              </a>
-              <a href="./404.html" class="card">
-                <img
-                  src="https://i.ibb.co/0DqQvRB/Li-SA-Akeboshi.jpg"
-                  alt="LiSA-Akeboshi"
-                />
-                <div class="card-body">
-                  <h5 class="line-clamp">Akeboshi - LiSA</h5>
-                </div>
-              </a>
-            </div>
-          </article>
-        </main>
-
-        <aside id="aside">
-          <a href="./identity.html" id="identity" class="card">
+    <main id="content">
+      <section id="latest-post">
+        <h3>Postingan Terbaru</h3>
+        <div class="container">
+          <a href="./404.html" class="card">
             <img
-              src="https://i.ibb.co/7tz6Z60/identity-ar.jpg"
-              alt="Profile Image"
+              src="https://i.ibb.co/w7L7SBm/King-Gnu-Sakayume.png"
+              alt="King-Gnu-Sakayume"
             />
-            <div class="info">
-              <h5 style="color: #000000">Aditya Restu Adji</h5>
-              <h5 style="color: #999999">@adityarrestu</h5>
-            </div>
+            <h5 class="line-clamp">Sakayume - King Gnu</h5>
           </a>
-          <div class="card container">
-            <a href="./404.html">
-              <img
-                src="https://i.ibb.co/0M56C73/Moona-Hoshinova-High-Tide.jpg"
-                alt="Moona-Hoshinova-High-Tide"
-              />
-              <div class="card">
-                <h5 class="line-clamp">
-                  <span>#1</span> High Tide - Moona Hoshinova
-                </h5>
-              </div>
-            </a>
-            <a href="./404.html">
-              <div class="card">
-                <h5 class="line-clamp"><span>#2</span> Kaikai Kitan - Eve</h5>
-              </div>
-            </a>
-            <a href="./404.html">
-              <div class="card">
-                <h5 class="line-clamp">
-                  <span>#3</span> Zankyou Sanka - Aimer
-                </h5>
-              </div>
-            </a>
-            <a href="./404.html">
-              <div class="card">
-                <h5 class="line-clamp">
-                  <span>#4</span> Ciki Ciki Bam Bam - QUEENDOM
-                </h5>
-              </div>
-            </a>
-            <a href="./404.html">
-              <div class="card">
-                <h5 class="line-clamp">
-                  <span>#5</span> Akuma no Ko - Higuchi Ai
-                </h5>
-              </div>
-            </a>
+          <a href="./404.html" class="card">
+            <img
+              src="https://i.ibb.co/0M56C73/Moona-Hoshinova-High-Tide.jpg"
+              alt="Moona-Hoshinova-High-Tide"
+            />
+            <h5 class="line-clamp">High Tide - Moona Hoshinova</h5>
+          </a>
+          <a href="./404.html" class="card">
+            <img src="https://i.ibb.co/QPXcy2W/Eve.jpg" alt="Eve" />
+            <h5 class="line-clamp">Kaikai Kitan - Eve</h5>
+          </a>
+          <a href="./404.html" class="card">
+            <img
+              src="https://i.ibb.co/N7zMrYX/Higuchi-Ai-Akuma-no-Ko.jpg"
+              alt="Higuchi-Ai-Akuma-no-Ko"
+            />
+            <h5 class="line-clamp">Akuma no Ko - Higuchi Ai</h5>
+          </a>
+          <a href="./404.html" class="card">
+            <img
+              src="https://i.ibb.co/f2CMzLK/Li-SA-Gurenge.jpg"
+              alt="Li-SA-Gurenge"
+            />
+            <h5 class="line-clamp">Gurenge - LiSA</h5>
+          </a>
+          <a href="./404.html" class="card">
+            <img
+              src="https://i.ibb.co/z4h6TqK/Ciki-ciki-bam-bam.jpg"
+              alt="Ciki-ciki-bam-bam"
+            />
+            <h5 class="line-clamp">Ciki Ciki Bam Bam - QUEENDOM</h5>
+          </a>
+          <a href="./404.html" class="card">
+            <img
+              src="https://i.ibb.co/Bjg8q9T/Nasuo-Honey-Jet-Coaster.jpg"
+              alt="Nasuo-Honey-Jet-Coaster"
+            />
+            <h5 class="line-clamp">Honey Jet Coaster - Nasuo</h5>
+          </a>
+          <a href="./404.html" class="card">
+            <img
+              src="https://i.ibb.co/0DqQvRB/Li-SA-Akeboshi.jpg"
+              alt="LiSA-Akeboshi"
+            />
+            <h5 class="line-clamp">Akeboshi - LiSA</h5>
+          </a>
+        </div>
+      </section>
+
+      <aside>
+        <a href="./identity.html" id="identity" class="card">
+          <img
+            src="https://i.ibb.co/7tz6Z60/identity-ar.jpg"
+            alt="Profile Image"
+          />
+          <div class="info">
+            <h5 style="color: #000000">Aditya Restu Adji</h5>
+            <h5 style="color: #999999">@adityarrestu</h5>
           </div>
-        </aside>
-      </div>
-    </div>
+        </a>
+        <div class="card container">
+          <a href="./404.html">
+            <img
+              src="https://i.ibb.co/0M56C73/Moona-Hoshinova-High-Tide.jpg"
+              alt="Moona-Hoshinova-High-Tide"
+            />
+            <h5 class="line-clamp">
+              <span>#1</span> High Tide - Moona Hoshinova
+            </h5>
+          </a>
+          <a href="./404.html">
+            <h5 class="line-clamp"><span>#2</span> Kaikai Kitan - Eve</h5>
+          </a>
+          <a href="./404.html">
+            <h5 class="line-clamp"><span>#3</span> Zankyou Sanka - Aimer</h5>
+          </a>
+          <a href="./404.html">
+            <h5 class="line-clamp">
+              <span>#4</span> Ciki Ciki Bam Bam - QUEENDOM
+            </h5>
+          </a>
+          <a href="./404.html">
+            <h5 class="line-clamp"><span>#5</span> Akuma no Ko - Higuchi Ai</h5>
+          </a>
+        </div>
+      </aside>
+    </main>
 
     <footer>
       <p>&copy; 2022 Mayo Lirik</p>
