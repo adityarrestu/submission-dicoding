@@ -28,7 +28,8 @@ body {
 }
 
 body.dark-mode header,
-body.dark-mode #content {
+body.dark-mode #content,
+body.dark-mode nav {
   background-color: var(--dark-color);
   transition: background-color 300ms ease-in-out;
 }
@@ -256,6 +257,10 @@ header .btn-dark:hover .tooltip {
   visibility: visible;
 }
 
+nav {
+  transition: background-color 300ms ease-in-out;
+}
+
 nav ul {
   margin: 0 15px;
   position: relative;
@@ -281,7 +286,7 @@ nav #kategori:hover .dropdown {
 }
 
 nav ul li a {
-  padding: 15px 0px;
+  padding: 10px 0px;
   font-size: 0.8rem;
 }
 
@@ -298,6 +303,14 @@ nav .dropdown {
   transform: translateY(-100%);
   transition: 300ms ease-in-out;
   z-index: -5;
+}
+
+nav .dropdown #btn-close {
+  display: none;
+}
+
+nav .dropdown #btn-close a {
+  color: red;
 }
 
 /* CONTENT */
@@ -440,21 +453,26 @@ footer {
   }
 
   aside #identity {
-    position: relative;
     border-top: var(--border-light);
     padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  aside #identity h1 {
+    grid-column: 1 / 5;
   }
   
   aside #identity img {
     max-height: 60px;
-    align-self: flex-start;
   }
   
   aside #identity h3 {
-    align-self: flex-start;
-    position: absolute;
     top: 40px;
     left: 100px;
+    grid-column: 2 / 5;
+    justify-self: start;
+    align-self: flex-start;
   }
 
   aside #ranking {
@@ -533,10 +551,50 @@ footer {
     right: 20px;
   }
 
+  .tooltip {
+    display: none;
+  }
+
+  nav ul {
+    padding: 5px 0;
+  }
+
+  nav ul li a {
+    padding-bottom: 5px;
+  }
+
   nav #kategori.open .dropdown {
     opacity: 1;
     transform: translateY(0);
-    top: 100px;
+  }
+
+  nav #kategori.close .dropdown {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  nav #kategori {
+    position: relative;
+  }
+
+  nav .dropdown {
+    position: fixed;
+    left: 10px;
+    top: 55px;
+    display: flex;
+    padding: 5px;
+    padding-top: 10px;
+    margin: 0;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  nav .dropdown a {
+    white-space: nowrap;
+  }
+
+  nav .dropdown #btn-close {
+    display: block;
   }
 
   #content article pre {
@@ -607,11 +665,108 @@ footer {
     font-size: 10px;
     padding: 2px;
   }
+
+  #content article img {
+    max-height: 200px;
+  }
 }
 
-@media only screen and (max-width: 992px) and (orientation: landscape) {
+@media only screen and 
+(max-width: 360px) and 
+(min-width: 250px) {
+  #content article h1,
+  aside h1 {
+    font-size: 16px;
+  }
 
+  #content article pre {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  aside {
+    padding: 5px;
+  }
+
+  aside h3 {
+    font-size: 14px;
+  }
+
+  aside #identity,
+  aside #ranking {
+    padding: 10px;
+  }
+
+  aside #identity h1 {
+    padding: 0;
+  }
+
+  aside #identity img {
+    height: 50px;
+  }
+
+  aside #ranking img {
+    max-height: 200px;
+  }
+
+  aside #ranking h4 {
+    font-size: 12px;
+  }
+
+  aside #ranking ul li {
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  footer {
+    padding: 10px;
+    height: 50px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
 }
+
+@media only screen and 
+(max-width: 992px) and 
+(orientation: landscape) {
+  nav #kategori.open .dropdown {
+      opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav #kategori.close .dropdown {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  nav #kategori {
+    position: relative;
+  }
+
+  nav .dropdown {
+    position: fixed;
+    left: 10px;
+    top: 50px;
+    display: flex;
+    padding: 5px;
+    padding-top: 10px;
+    margin: 0;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  nav .dropdown a {
+    white-space: nowrap;
+  }
+
+  nav .dropdown #btn-close {
+    display: block;
+  }
+}
+
+
 
 @media (min-width: 1440px) {
   body {

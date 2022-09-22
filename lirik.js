@@ -15,5 +15,6 @@ darkMode.addEventListener('click', () => {
 })
 
 btnKategori.addEventListener('click', () => {
+  btnKategori.classList.toggle('close')  
   btnKategori.classList.toggle('open')
 })
