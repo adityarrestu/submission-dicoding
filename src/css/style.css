@@ -76,6 +76,10 @@ body.dark-mode .tooltip::after {
   border-color: transparent transparent var(--dark-hover-color) transparent;
 }
 
+body.dark-mode nav .dropdown {
+  background-color: var(--dark-color);
+}
+
 header,
 #content {
   transition: background-color 300ms ease-in-out;
@@ -102,6 +106,7 @@ li {
 a {
   text-decoration: none;
   color: var(--dark-color);
+  cursor: pointer;
 }
 
 .line-clamp {
@@ -120,6 +125,10 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
+}
+
+header > a {
+  margin-left: 50px;
 }
 
 header > .btn-menu {
@@ -249,6 +258,8 @@ header .btn-dark:hover .tooltip {
 
 nav ul {
   margin: 0 15px;
+  position: relative;
+  z-index: 5;
 }
 
 nav ul li {
@@ -263,9 +274,30 @@ nav ul li:hover {
   background-color: var(--light-hover-color);
 }
 
+nav #kategori:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 400ms ease-in-out;
+}
+
 nav ul li a {
   padding: 15px 0px;
   font-size: 0.8rem;
+}
+
+nav .dropdown {
+  position: absolute;
+  background-color: var(--light-color);
+  top: 40px;
+  left: 80px;
+  border-radius: 0 0 5px 5px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 300ms ease-in-out;
+  z-index: -5;
 }
 
 /* CONTENT */
@@ -469,7 +501,7 @@ footer {
     overflow: hidden;
   }
 
-  nav ul {
+  nav > ul {
     position: relative;
   }
 
@@ -499,6 +531,12 @@ footer {
 
   header .btn-search {
     right: 20px;
+  }
+
+  nav #kategori.open .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    top: 100px;
   }
 
   #content article pre {
@@ -569,6 +607,10 @@ footer {
     font-size: 10px;
     padding: 2px;
   }
+}
+
+@media only screen and (max-width: 992px) and (orientation: landscape) {
+
 }
 
 @media (min-width: 1440px) {
